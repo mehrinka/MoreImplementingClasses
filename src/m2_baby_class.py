@@ -92,12 +92,12 @@ def main():
 
 class Baby(object):
     def __init__(self, name):
-        print('Hello baby', name, '!')
+        print('Hello baby', name + '!')
         self.name = name
         self.count = 0
 
     def feed_baby(self):
-        print('Thank you for feeding baby', self.name, '.')
+        print('Thank you for feeding baby', self.name + '.')
         self.count = 0
 
     def hour_passes(self):
