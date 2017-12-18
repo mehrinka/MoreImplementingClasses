@@ -228,8 +228,8 @@ class Line(object):
         self.number_of_clones = 0
         self.start = start.clone()
         self.end = end.clone()
-        self.start1 = self.start
-        self.end1 = self.end
+        self.start1 = start.clone()
+        self.end1 = end.clone()
 
 
     def __repr__(self):
@@ -417,7 +417,7 @@ class Line(object):
         # --------------------------------------------------------------
 
         if self.end.x - self.start.x != 0:
-            return (self.end.y - self.start.y)/ (self.end.x - self.start.x)
+            return (self.end.y - self.start.y) / (self.end.x - self.start.x)
         else:
             return math.inf
 
@@ -700,7 +700,7 @@ class Line(object):
             print(line2)  # Should print: Line[(0, 1), (10, 20)]
         """
         # --------------------------------------------------------------
-        # TODO: 13.
+        # Done: 13.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
