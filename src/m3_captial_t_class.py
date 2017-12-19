@@ -266,19 +266,22 @@ class CapitalT(object):
           :rtype: CapitalT
         """
         # --------------------------------------------------------------
-        # TODO: 7.
+        # Done: 7.
         #   READ the above specification, including the Example.
         #   Implement and test this method by uncommenting the appropriate
         #     run_test method in main. Compare the graphics window to
         #     clone.pdf.
         # --------------------------------------------------------------
 
-        return CapitalT(self.h_rect.get_center(), self.h_rect.get_width(), self.v_rect.get_height(), self.v_rect.get_width())
-
+        clone = CapitalT(self.h_rect.get_center(), self.h_rect.get_width(), self.v_rect.get_height(), self.v_rect.get_width())
+        clone.set_colors(self.h_rect.fill_color,self.h_rect.outline_color)
+        return clone
 
     # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
 # imported by another module), then call the 'main' function.
 # ----------------------------------------------------------------------
+
+
 if __name__ == '__main__':
     main()
